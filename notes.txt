@@ -1,0 +1,75 @@
+register --> tulis data ke user game
+login baca dari data base --> generate token 
+
+buat room game --> buat logic jika pemain penuh
+
+
+main game 
+
+tulis data menang/kalah ke history_game
+
+>> setelah regis bisa login
+>> setelah login dapat token
+>> token untuk buat room
+>> dari room dapat id room
+>> id dan token di gunakan untuk fight/main game
+
+baru bisa fight ketika data dalam room ada 2 player
+ketika penuh tolak 
+
+sequelize steps
+    npm install sequelize-cli -g
+
+1. npm init -y
+2. npm install sequelize
+3. sequelize init
+
+4.sequelize db:create --> executing config_file
+
+sequelize model:generate --name user_game --attributes nama:string,password:string,role:string
+sequelize model:generate --name user_game_biodata --attributes id_user:string,email:string,hobby:string
+sequelize model:generate --name user_game_history --attributes id_user:string,menang_kalah:string
+
+5.sequlize db:migrate
+
+api
+   1 register
+   2 login
+   3 buat room
+        {
+          player,
+          room_name,
+        }
+
+        cek autorisasi
+   4 main game
+        {
+            // data yang akan di kirim
+            id_token,
+            nama_room,
+            nama,
+            pilihan_player           
+
+        }
+            udah penuh atau belum
+                kalo penuh tolak
+
+   5 tampil history permainan
+            bawa token
+            bawa id
+
+
+tabel
+    user_game
+        username, password,role
+    user_game_biodata
+       id_user email, no_hp --> one_to_one
+    user_game_history
+      id_user id_player1, id_player_2, pilihan_p1, pilihanp2, hasil --> one_to_many
+    user_game_room
+       id_user nama_room, pilihan_player1, pilihan_player2, one_to_many
+
+sequelize model:generate --name user_game --attributes username:string,password:string,role:string
+sequelize model:generate --name user_game_biodata --attributes id_user:string,email:string,no_hp:string
+sequelize model:generate --name user_game_history --attributes id_user:string,id_player1:string,id_player_2:string,pilihan_p1:string,pilihan_p2:string,hasil:string
+sequelize model:generate --name user_game_room --attributes id_user:string,nama_room:string,player1:string,player2:string
