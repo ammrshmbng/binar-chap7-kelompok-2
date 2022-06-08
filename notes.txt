@@ -39,6 +39,7 @@ api
         {
           player,
           room_name,
+          token, di header
         }
 
         cek autorisasi

@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },id_user: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         references: {
           model: {
             tableName: 'user_games',
