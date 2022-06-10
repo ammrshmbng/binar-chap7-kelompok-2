@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       user_game.hasOne(models.user_game_biodata, { foreignKey: 'id_user', sourceKey: 'id' }); 
       user_game.hasMany(models.user_game_history, { foreignKey: 'id_user', sourceKey: 'id' }); 
-      user_game.hasMany(models.user_game_room, { foreignKey: 'id_user', sourceKey: 'id' }); 
+      user_game.hasMany(models.user_game_room, { foreignKey: 'id_user', sourceKey: 'id' });
     }
   }
   user_game.init({

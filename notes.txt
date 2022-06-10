@@ -72,8 +72,18 @@ tabel
 
 sequelize model:generate --name user_game --attributes username:string,password:string,role:string
 
-sequelize model:generate --name user_game_biodata --attributes id_user:string,email:string,no_hp:string
+sequelize model:generate --name user_game_biodata --attributes id_user:integer,email:string,no_hp:string
 
-sequelize model:generate --name user_game_history --attributes id_user:string,id_player1:string,id_player_2:string,pilihan_p1:string,pilihan_p2:string,hasil:string
+sequelize model:generate --name user_game_history --attributes id_user:integer,hasilP1:string,hasilP2:string
 
-sequelize model:generate --name user_game_room --attributes id_user:string,nama_room:string,player1:string,player2:string
+sequelize model:generate --name user_game_room --attributes id_user:integer,nama_room:string,idP1:string,idP2:string,pilihanP1:string,pilihanP2:string
+
+
+tabel
+    pilihan_player2
+    pilihan_player1
+        ketike player 1 sudah input tiga kali tolak
+        ketika player2 input langsung fight
+
+    ["M","K","S"]
+    ["G","B","K"]

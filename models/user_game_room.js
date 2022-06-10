@@ -12,13 +12,16 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       user_game_room.belongsTo(models.user_game, { foreignKey: 'id_user', sourceKey: 'id' });
+
     }
   }
   user_game_room.init({
-    id_user: DataTypes.STRING,
+    id_user: DataTypes.INTEGER,
     nama_room: DataTypes.STRING,
-    player1: DataTypes.STRING,
-    player2: DataTypes.STRING
+    idP1: DataTypes.STRING,
+    idP2: DataTypes.STRING,
+    pilihanP1: DataTypes.STRING,
+    pilihanP2: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'user_game_room',
