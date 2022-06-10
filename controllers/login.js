@@ -10,7 +10,7 @@ const login = async (req,res)=>{
         where : {username: req.body.username}
     });
 
-    if(!data.nama==req.body.nama && data.password== req.body.password){
+    if(!data.username==req.body.nama && data.password== req.body.password){
         res.json({messase:"nama atau password mungkin salah"});
     }
 
