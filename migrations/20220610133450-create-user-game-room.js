@@ -30,11 +30,12 @@ module.exports = {
       },
       pilihanP1: {
         type: Sequelize.ARRAY(Sequelize.STRING),
-        defaultValue: ['', '', ''],
+        defaultValue: []
       },
       pilihanP2: {
         type: Sequelize.ARRAY(Sequelize.STRING),
-        defaultValue: ['', '', ''],
+        defaultValue: []
+        
       },
       createdAt: {
         allowNull: false,

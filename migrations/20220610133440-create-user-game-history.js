@@ -21,11 +21,11 @@ module.exports = {
       },
       hasilP1: {
         type: Sequelize.ARRAY(Sequelize.STRING),
-        defaultValue: ['', '', '']
+        
       },
       hasilP2: {
         type: Sequelize.ARRAY(Sequelize.STRING),
-        defaultValue: ['', '', ''],
+        
       },
       createdAt: {
         allowNull: false,

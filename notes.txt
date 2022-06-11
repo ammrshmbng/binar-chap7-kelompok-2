@@ -87,3 +87,8 @@ tabel
 
     ["M","K","S"]
     ["G","B","K"]
+
+API game
+    {nama_room: "room1",
+     pilihanP1
+    }

@@ -20,8 +20,11 @@ module.exports = (sequelize, DataTypes) => {
     nama_room: DataTypes.STRING,
     idP1: DataTypes.STRING,
     idP2: DataTypes.STRING,
-    pilihanP1: DataTypes.STRING,
-    pilihanP2: DataTypes.STRING
+    pilihanP1:{
+     type: DataTypes.ARRAY(DataTypes.STRING),
+     defaultValue: []
+    },
+    pilihanP2: DataTypes.ARRAY(DataTypes.STRING),
   }, {
     sequelize,
     modelName: 'user_game_room',

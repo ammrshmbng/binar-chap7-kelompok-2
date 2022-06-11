@@ -17,8 +17,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   user_game_history.init({
     id_user: DataTypes.INTEGER,
-    hasilP1: DataTypes.STRING,
-    hasilP2: DataTypes.STRING
+    hasilP1:{
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: []
+     },
+     hasilP2:{
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: []
+     },
   }, {
     sequelize,
     modelName: 'user_game_history',

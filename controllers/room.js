@@ -46,8 +46,8 @@ const room = async (req,res)=>{
 
 
     }catch(err){
-        user = req.user.id
-        res.json({message:"data kosong",user})
+        
+        res.json({message:"data kosong"})
 
     }
     
