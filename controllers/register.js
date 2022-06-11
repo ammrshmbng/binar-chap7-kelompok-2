@@ -1,4 +1,5 @@
 const db  = require('../models');
+
 const register = async (req,res)=>{
    const data = await db.user_game.create({
         username: req.body.username,
