@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
 // import controller
-const {history} = require('../controllers/history');
+const {jwtAuthorization,history,} = require('../controllers/history');
 
-router.post('/',history);
+router.post('/',jwtAuthorization,history);
 
 module.exports = router;
