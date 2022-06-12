@@ -16,6 +16,7 @@ const login = async (req,res)=>{
 
     const tokenPayload = {
         id: data.id,
+        username: data.username,
         nama : data.nama,
         role: data.role
     }
